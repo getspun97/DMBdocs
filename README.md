@@ -114,7 +114,14 @@ services:
 
 ## 🌐 Environment Variables
 
-See the [.env.example](https://github.com/I-am-PUID-0/DMB/blob/FastAPI/.env.example)
+The following table lists all available environment variables used by the container. The environment variables are set via the `-e` parameter or via the docker-compose file within the `environment:` section or with a .env file saved to the config directory. Value of this parameter is listed as `<VARIABLE_NAME>=<Value>`
+
+| Variable       | Default  | Description                                                       | Required for DMB |
+| -------------- | -------- | ------------------------------------------------------------------|----------------- |
+| `PUID`         | `1000`   | Your User ID | :heavy_check_mark: |
+| `PGID`         | `1000`   | Your Group ID                                           |:heavy_check_mark:           |
+| `TZ`           | `(null)` | Your time zone listed as `Area/Location`            | :heavy_check_mark:              |
+
 
 ## 🌐 Ports Used
 
