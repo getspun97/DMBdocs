@@ -116,11 +116,38 @@ services:
 
 The following table lists all available environment variables used by the container. The environment variables are set via the `-e` parameter or via the docker-compose file within the `environment:` section or with a .env file saved to the config directory. Value of this parameter is listed as `<VARIABLE_NAME>=<Value>`
 
+Global Variables:
 | Variable       | Default  | Description                                                       | Required for DMB |
 | -------------- | -------- | ------------------------------------------------------------------|----------------- |
 | `PUID`         | `1000`   | Your User ID | :heavy_check_mark: |
-| `PGID`         | `1000`   | Your Group ID                                           |:heavy_check_mark:           |
-| `TZ`           | `(null)` | Your time zone listed as `Area/Location`            | :heavy_check_mark:              |
+| `PGID`         | `1000`   | Your Group ID |:heavy_check_mark: |
+| `TZ`           | `(null)` | Your time zone listed as `Area/Location` | :heavy_check_mark: |
+
+DMB Variables:
+| Variable       | Default  | Description                                                       | Required for DMB |
+| -------------- | -------- | ------------------------------------------------------------------|----------------- |
+| DMB_LOG_LEVEL  | `INFO` |Set your DMB log level.  Choices are `INFO` or `DEBUG`  |
+| DMB_LOG_NAME   | `DMB` | Name of the DMB log file |
+| DMB_LOG_DIR    | `/log` | Path to the DMB log file |
+| DMB_LOG_COUNT  | `2` | Number of DMB log files |
+| DMB_LOG_SIZE   | `10M` | Max size of DMB log file |
+| DMB_COLOR_LOG  | `true` | Color code log for better readability |
+| DMB_PLEX_TOKEN | `(null)` | Enter your Plex token |
+| DMB_PLEX_ADDRESS | `(null)` | ip address of your plex machine written as `http://<IP_ADDRESS>:<PORT>` |
+| DMB_GITHUB_TOKEN | `(null)` | Enter your GitHub token |
+
+DMB API Variables:
+| Variable       | Default  | Description                                                       | Required for DMB |
+| -------------- | -------- | ------------------------------------------------------------------|----------------- |
+| DMB_API_SERVICE_ENABLED | true | Enables or disables DMB API service |
+| DMB_API_SERVICE_PROCESS_NAME | DMB API | Name of the DMB API service process |
+| DMB_API_SERVICE_LOG_LEVEL | INFO | Set the DMB API log level. Choices are `INFO` or `DEBUG` |
+| DMB_API_SERVICE_HOST | 127.0.0.1 | The ip address of your DMB host machine |
+| DMB_API_SERVICE_PORT | 8000 | The port used for the DMB API service |
+
+
+
+
 
 
 ## 🌐 Ports Used
