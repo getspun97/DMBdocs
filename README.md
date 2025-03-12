@@ -139,12 +139,35 @@ DMB Variables:
 DMB API Variables:
 | Variable       | Default  | Description                                                       | Required for DMB |
 | -------------- | -------- | ------------------------------------------------------------------|----------------- |
-| DMB_API_SERVICE_ENABLED | true | Enables or disables DMB API service |
-| DMB_API_SERVICE_PROCESS_NAME | DMB API | Name of the DMB API service process |
-| DMB_API_SERVICE_LOG_LEVEL | INFO | Set the DMB API log level. Choices are `INFO` or `DEBUG` |
-| DMB_API_SERVICE_HOST | 127.0.0.1 | The ip address of your DMB host machine |
-| DMB_API_SERVICE_PORT | 8000 | The port used for the DMB API service |
+| DMB_API_SERVICE_ENABLED | `true` | Enables or disables DMB API service |
+| DMB_API_SERVICE_PROCESS_NAME | `DMB API` | Name of the DMB API service process |
+| DMB_API_SERVICE_LOG_LEVEL | `INFO` | Set the DMB API log level. Choices are `INFO` or `DEBUG` |
+| DMB_API_SERVICE_HOST | `127.0.0.1` | The ip address of your DMB host machine |
+| DMB_API_SERVICE_PORT | `8000` | The port used for the DMB API service |
 
+DMB Frontend Variables
+| Variable       | Default  | Description                                                       | Required for DMB |
+| -------------- | -------- | ------------------------------------------------------------------|----------------- |
+| DMB_FRONTEND_ENABLED | `true` |
+| DMB_FRONTEND_PROCESS_NAME | `"DMB Frontend"` |
+| DMB_FRONTEND_REPO_OWNER | `I-am-PUID-0` |
+| DMB_FRONTEND_REPO_NAME | `dmbdb` |
+| DMB_FRONTEND_RELEASE_VERSION_ENABLED | `false` |
+| DMB_FRONTEND_RELEASE_VERSION | `1.1.0` |
+| DMB_FRONTEND_BRANCH_ENABLED | `false` |
+| DMB_FRONTEND_BRANCH | `main` |
+| DMB_FRONTEND_SUPPRESS_LOGGING | `false` |
+| DMB_FRONTEND_LOG_LEVEL= | `INFO` |
+| DMB_FRONTEND_ORIGINS | `http://0.0.0.0:3005` |
+| DMB_FRONTEND_HOST | `0.0.0.0` |
+| DMB_FRONTEND_PORT | `3005` |
+| DMB_FRONTEND_AUTO_UPDATE | `false` |
+| DMB_FRONTEND_AUTO_UPDATE_INTERVAL | `24` |
+| DMB_FRONTEND_CLEAR_ON_UPDATE | `true` |
+| DMB_FRONTEND_EXCLUDE_DIRS | `(null)`
+| DMB_FRONTEND_PLATFORMS | `pnpm` |
+| DMB_FRONTEND_COMMAND | `node .output/server/index.mjs` |
+| DMB_FRONTEND_CONFIG_DIR | `/dmb/frontend` |
 
 
 
