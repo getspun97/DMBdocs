@@ -126,200 +126,200 @@ Global Variables:
 DMB Variables:
 | Variable       | Default  | Description                                                       | Required for DMB |
 | -------------- | -------- | ------------------------------------------------------------------|----------------- |
-| DMB_LOG_LEVEL  | `INFO` |Set your DMB log level.  Choices are `INFO` or `DEBUG`  |
-| DMB_LOG_NAME   | `DMB` | Name of the DMB log file |
-| DMB_LOG_DIR    | `/log` | Path to the DMB log file |
-| DMB_LOG_COUNT  | `2` | Number of DMB log files |
-| DMB_LOG_SIZE   | `10M` | Max size of DMB log file |
-| DMB_COLOR_LOG  | `true` | Color code log for better readability |
-| DMB_PLEX_TOKEN | `(null)` | Enter your Plex token |
-| DMB_PLEX_ADDRESS | `(null)` | ip address of your plex machine written as `http://<IP_ADDRESS>:<PORT>` |
-| DMB_GITHUB_TOKEN | `(null)` | Enter your GitHub token |
+| `DMB_LOG_LEVEL`  | `INFO` |Set your DMB log level.  Choices are `INFO` or `DEBUG`  |
+| `DMB_LOG_NAME`   | `DMB` | Name of the DMB log file |
+| `DMB_LOG_DIR`    | `/log` | Path to the DMB log file |
+| `DMB_LOG_COUNT`  | `2` | Number of DMB log files |
+| `DMB_LOG_SIZE`   | `10M` | Max size of DMB log file |
+| `DMB_COLOR_LOG`  | `true` | Color code log for better readability |
+| `DMB_PLEX_TOKEN` | `(null)` | Enter your Plex token |
+| `DMB_PLEX_ADDRESS` | `(null)` | ip address of your plex machine written as `http://<IP_ADDRESS>:<PORT>` |
+| `DMB_GITHUB_TOKEN` | `(null)` | Enter your GitHub token |
 
 DMB API Variables:
 | Variable       | Default  | Description                                                       | Required for DMB |
 | -------------- | -------- | ------------------------------------------------------------------|----------------- |
-| DMB_API_SERVICE_ENABLED | `true` | Enables or disables DMB API service |
-| DMB_API_SERVICE_PROCESS_NAME | `DMB API` | Name of the DMB API service process |
-| DMB_API_SERVICE_LOG_LEVEL | `INFO` | Set the DMB API log level. Choices are `INFO` or `DEBUG` |
-| DMB_API_SERVICE_HOST | `127.0.0.1` | The ip address of your DMB host machine |
-| DMB_API_SERVICE_PORT | `8000` | The port used for the DMB API service |
+| `DMB_API_SERVICE_ENABLED` | `true` | Enables or disables DMB API service |
+| `DMB_API_SERVICE_PROCESS_NAME` | `DMB API` | Name of the DMB API service process |
+| `DMB_API_SERVICE_LOG_LEVEL` | `INFO` | Set the DMB API log level. Choices are `INFO` or `DEBUG` |
+| `DMB_API_SERVICE_HOST` | `127.0.0.1` | The ip address of your DMB host machine |
+| `DMB_API_SERVICE_PORT` | `8000` | The port used for the DMB API service |
 
 DMB Frontend Variables:
 | Variable       | Default  | Description                                                       | Required for DMB |
 | -------------- | -------- | ------------------------------------------------------------------|----------------- |
-| DMB_FRONTEND_ENABLED | `true` |
-| DMB_FRONTEND_PROCESS_NAME | `"DMB Frontend"` |
-| DMB_FRONTEND_REPO_OWNER | `I-am-PUID-0` |
-| DMB_FRONTEND_REPO_NAME | `dmbdb` |
-| DMB_FRONTEND_RELEASE_VERSION_ENABLED | `false` |
-| DMB_FRONTEND_RELEASE_VERSION | `1.1.0` |
-| DMB_FRONTEND_BRANCH_ENABLED | `false` |
-| DMB_FRONTEND_BRANCH | `main` |
-| DMB_FRONTEND_SUPPRESS_LOGGING | `false` |
-| DMB_FRONTEND_LOG_LEVEL= | `INFO` |
-| DMB_FRONTEND_ORIGINS | `http://0.0.0.0:3005` |
-| DMB_FRONTEND_HOST | `0.0.0.0` |
-| DMB_FRONTEND_PORT | `3005` |
-| DMB_FRONTEND_AUTO_UPDATE | `false` |
-| DMB_FRONTEND_AUTO_UPDATE_INTERVAL | `24` |
-| DMB_FRONTEND_CLEAR_ON_UPDATE | `true` |
-| DMB_FRONTEND_EXCLUDE_DIRS | `(null)`
-| DMB_FRONTEND_PLATFORMS | `pnpm` |
-| DMB_FRONTEND_COMMAND | `node .output/server/index.mjs` |
-| DMB_FRONTEND_CONFIG_DIR | `/dmb/frontend` |
+| `DMB_FRONTEND_ENABLED` | `true` |
+| `DMB_FRONTEND_PROCESS_NAME` | `"DMB Frontend"` |
+| `DMB_FRONTEND_REPO_OWNER` | `I-am-PUID-0` |
+| `DMB_FRONTEND_REPO_NAME` | `dmbdb` |
+| `DMB_FRONTEND_RELEASE_VERSION_ENABLED` | `false` |
+| `DMB_FRONTEND_RELEASE_VERSION` | `1.1.0` |
+| `DMB_FRONTEND_BRANCH_ENABLED` | `false` |
+| `DMB_FRONTEND_BRANCH` | `main` |
+| `DMB_FRONTEND_SUPPRESS_LOGGING` | `false` |
+| `DMB_FRONTEND_LOG_LEVEL` | `INFO` |
+| `DMB_FRONTEND_ORIGINS` | `http://0.0.0.0:3005` |
+| `DMB_FRONTEND_HOST` | `0.0.0.0` |
+| `DMB_FRONTEND_PORT` | `3005` |
+| `DMB_FRONTEND_AUTO_UPDATE` | `false` |
+| `DMB_FRONTEND_AUTO_UPDATE_INTERVAL` | `24` |
+| `DMB_FRONTEND_CLEAR_ON_UPDATE` | `true` |
+| `DMB_FRONTEND_EXCLUDE_DIRS` | `(null)`
+| `DMB_FRONTEND_PLATFORMS` | `pnpm` |
+| `DMB_FRONTEND_COMMAND` | `node .output/server/index.mjs` |
+| `DMB_FRONTEND_CONFIG_DIR` | `/dmb/frontend` |
 
 PostgreSQL Variables:
 | Variable       | Default  | Description                                                       | Required for DMB |
 | -------------- | -------- | ------------------------------------------------------------------|----------------- |
-POSTGRES_ENABLED=true
-POSTGRES_PROCESS_NAME=PostgreSQL
-POSTGRES_SUPPRESS_LOGGING=false
-POSTGRES_LOG_LEVEL=INFO
-POSTGRES_HOST=127.0.0.1
-POSTGRES_PORT=5432
-POSTGRES_CONFIG_DIR=/postgres_data
-POSTGRES_CONFIG_FILE=/postgres_data/postgresql.conf
-POSTGRES_INITDB_ARGS=--data-checksums
-POSTGRES_USER=DMB
-POSTGRES_PASSWORD=postgres
-POSTGRES_SHARED_BUFFERS=128MB
-POSTGRES_MAX_CONNECTIONS=100
-POSTGRES_RUN_DIRECTORY=/run/postgresql
-POSTGRES_COMMAND=postgres -D {postgres_config_dir} -c config_file={postgres_config_file}
+| `POSTGRES_ENABLED` | `true` |
+| `POSTGRES_PROCESS_NAME` | `PostgreSQL` |
+| `POSTGRES_SUPPRESS_LOGGING` | `false` |
+| `POSTGRES_LOG_LEVEL` | `INFO` |
+| `POSTGRES_HOST` | `127.0.0.1` |
+| `POSTGRES_PORT` | `5432` |
+| `POSTGRES_CONFIG_DIR` | `/postgres_data` |
+| `POSTGRES_CONFIG_FILE` | `/postgres_data/postgresql.conf` | 
+| `POSTGRES_INITDB_ARGS` | `--data-checksums` |
+| `POSTGRES_USER` | `DMB` |
+| `POSTGRES_PASSWORD` | `postgres` |
+| `POSTGRES_SHARED_BUFFERS` | `128MB` |
+| `POSTGRES_MAX_CONNECTIONS` | `100` |
+| `POSTGRES_RUN_DIRECTORY` | `/run/postgresql` |
+| `POSTGRES_COMMAND` | `postgres -D {postgres_config_dir} -c config_file={postgres_config_file}` |
 
 pgAdmin Variables:
 | Variable       | Default  | Description                                                       | Required for DMB |
 | -------------- | -------- | ------------------------------------------------------------------|----------------- |
-PGADMIN_ENABLED=true
-PGADMIN_PROCESS_NAME=pgAdmin4
-PGADMIN_CONFIG_DIR=/pgadmin/data
-PGADMIN_CONFIG_FILE=/pgadmin/data/config_local.py
-PGADMIN_LOG_FILE=/pgadmin/data/pgadmin4.log
-PGADMIN_PORT=5050
-PGADMIN_DEFAULT_SERVER=0.0.0.0
-PGADMIN_SETUP_EMAIL=DMB@DMB.DMB
-PGADMIN_SETUP_PASSWORD=postgres
+| `PGADMIN_ENABLED` | `true` |
+| `PGADMIN_PROCESS_NAME` | `pgAdmin4` |
+| `PGADMIN_CONFIG_DIR` | `/pgadmin/data` |
+| `PGADMIN_CONFIG_FILE` | `/pgadmin/data/config_local.py` |
+| `PGADMIN_LOG_FILE` | `/pgadmin/data/pgadmin4.log` |
+| `PGADMIN_PORT` | `5050` |
+| `PGADMIN_DEFAULT_SERVER` | `0.0.0.0` |
+| `PGADMIN_SETUP_EMAIL` | `DMB@DMB.DMB` |
+| `PGADMIN_SETUP_PASSWORD` | `postgres` |
 
 Rclone Variables:
 | Variable       | Default  | Description                                                       | Required for DMB |
 | -------------- | -------- | ------------------------------------------------------------------|----------------- |
-RCLONE_INSTANCES_REALDEBRID_ENABLED=true
-RCLONE_INSTANCES_REALDEBRID_PROCESS_NAME="rclone w/ RealDebrid"
-RCLONE_INSTANCES_REALDEBRID_SUPPRESS_LOGGING=false
-RCLONE_INSTANCES_REALDEBRID_LOG_LEVEL=INFO
-RCLONE_INSTANCES_REALDEBRID_KEY_TYPE=RealDebrid
-RCLONE_INSTANCES_REALDEBRID_ZURG_ENABLED=true
-RCLONE_INSTANCES_REALDEBRID_MOUNT_DIR=/data
-RCLONE_INSTANCES_REALDEBRID_MOUNT_NAME=rclone_RD
-RCLONE_INSTANCES_REALDEBRID_CACHE_DIR=/cache
-RCLONE_INSTANCES_REALDEBRID_CONFIG_DIR=/config
-RCLONE_INSTANCES_REALDEBRID_CONFIG_FILE=/config/rclone.config
-RCLONE_INSTANCES_REALDEBRID_ZURG_CONFIG_FILE=/zurg/RD/config.yml
-RCLONE_INSTANCES_REALDEBRID_COMMAND=
-RCLONE_INSTANCES_REALDEBRID_API_KEY=
+| `RCLONE_INSTANCES_REALDEBRID_ENABLED` | `true` |
+| `RCLONE_INSTANCES_REALDEBRID_PROCESS_NAME` | `"rclone w/ RealDebrid"` |
+| `RCLONE_INSTANCES_REALDEBRID_SUPPRESS_LOGGING` | `false` |
+| `RCLONE_INSTANCES_REALDEBRID_LOG_LEVEL` | `INFO` |
+| `RCLONE_INSTANCES_REALDEBRID_KEY_TYPE` | `RealDebrid` |
+| `RCLONE_INSTANCES_REALDEBRID_ZURG_ENABLED` | `true` |
+| `RCLONE_INSTANCES_REALDEBRID_MOUNT_DIR` | `/data` |
+| `RCLONE_INSTANCES_REALDEBRID_MOUNT_NAME` | `rclone_RD` |
+| `RCLONE_INSTANCES_REALDEBRID_CACHE_DIR` | `/cache` |
+| `RCLONE_INSTANCES_REALDEBRID_CONFIG_DIR` | `/config` |
+| `RCLONE_INSTANCES_REALDEBRID_CONFIG_FILE` | `/config/rclone.config` |
+| `RCLONE_INSTANCES_REALDEBRID_ZURG_CONFIG_FILE` | `/zurg/RD/config.yml` |
+| `RCLONE_INSTANCES_REALDEBRID_COMMAND` | `(null)` |
+| `RCLONE_INSTANCES_REALDEBRID_API_KEY` | `(null)` |
 
 Riven Backend Variables:
 | Variable       | Default  | Description                                                       | Required for DMB |
 | -------------- | -------- | ------------------------------------------------------------------|----------------- |
-RIVEN_BACKEND_ENABLED=true
-RIVEN_BACKEND_PROCESS_NAME="Riven Backend"
-RIVEN_BACKEND_REPO_OWNER=rivenmedia
-RIVEN_BACKEND_REPO_NAME=riven
-RIVEN_BACKEND_RELEASE_VERSION_ENABLED=false
-RIVEN_BACKEND_RELEASE_VERSION=v0.20.1
-RIVEN_BACKEND_BRANCH_ENABLED=false
-RIVEN_BACKEND_BRANCH=release-please--branches--main
-RIVEN_BACKEND_SUPPRESS_LOGGING=false
-RIVEN_BACKEND_LOG_LEVEL=INFO
-RIVEN_BACKEND_HOST=127.0.0.1
-RIVEN_BACKEND_PORT=8080
-RIVEN_BACKEND_AUTO_UPDATE=false
-RIVEN_BACKEND_AUTO_UPDATE_INTERVAL=24
-RIVEN_BACKEND_SYMLINK_LIBRARY_PATH=/mnt
-RIVEN_BACKEND_CLEAR_ON_UPDATE=true
-RIVEN_BACKEND_EXCLUDE_DIRS=/riven/backend/data
-RIVEN_BACKEND_ENV_COPY_SOURCE=/riven/backend/data/.env
-RIVEN_BACKEND_ENV_COPY_DESTINATION=/riven/backend/src/.env
-RIVEN_BACKEND_PLATFORMS=python
-RIVEN_BACKEND_COMMAND=/riven/backend/venv/bin/python src/main.py
-RIVEN_BACKEND_CONFIG_DIR=/riven/backend
-RIVEN_BACKEND_CONFIG_FILE=/riven/backend/data/settings.json
-RIVEN_BACKEND_WAIT_FOR_DIR=/data/rclone_RD/__all__
+| `RIVEN_BACKEND_ENABLED` | `true` |
+| `RIVEN_BACKEND_PROCESS_NAME` | `"Riven Backend"` |
+| `RIVEN_BACKEND_REPO_OWNER` | `rivenmedia` |
+| `RIVEN_BACKEND_REPO_NAME` | `riven` |
+| `RIVEN_BACKEND_RELEASE_VERSION_ENABLED` | `false` |
+| `RIVEN_BACKEND_RELEASE_VERSION` | `v0.20.1` |
+| `RIVEN_BACKEND_BRANCH_ENABLED` | `false` |
+| `RIVEN_BACKEND_BRANCH` | `release-please--branches--main` |
+| `RIVEN_BACKEND_SUPPRESS_LOGGING` | `false` |
+| `RIVEN_BACKEND_LOG_LEVEL` | `INFO` |
+| `RIVEN_BACKEND_HOST` | `127.0.0.1` |
+| `RIVEN_BACKEND_PORT` | `8080` |
+| `RIVEN_BACKEND_AUTO_UPDATE` | `false` |
+| `RIVEN_BACKEND_AUTO_UPDATE_INTERVAL` | `24` |
+| `RIVEN_BACKEND_SYMLINK_LIBRARY_PATH` | `/mnt` |
+| `RIVEN_BACKEND_CLEAR_ON_UPDATE` | `true` |
+| `RIVEN_BACKEND_EXCLUDE_DIRS` | `/riven/backend/data` |
+| `RIVEN_BACKEND_ENV_COPY_SOURCE` | `/riven/backend/data/.env` |
+| `RIVEN_BACKEND_ENV_COPY_DESTINATION` | `/riven/backend/src/.env` |
+| `RIVEN_BACKEND_PLATFORMS` | `python` |
+| `RIVEN_BACKEND_COMMAND` | `/riven/backend/venv/bin/python src/main.py` |
+| `RIVEN_BACKEND_CONFIG_DIR` | `/riven/backend` |
+| `RIVEN_BACKEND_CONFIG_FILE` | `/riven/backend/data/settings.json` |
+| `RIVEN_BACKEND_WAIT_FOR_DIR` | `/data/rclone_RD/__all__` |
 
 Riven Frontend Variables:
 | Variable       | Default  | Description                                                       | Required for DMB |
 | -------------- | -------- | ------------------------------------------------------------------|----------------- |
-RIVEN_FRONTEND_ENABLED=true
-RIVEN_FRONTEND_PROCESS_NAME="Riven Frontend"
-RIVEN_FRONTEND_REPO_OWNER=rivenmedia
-RIVEN_FRONTEND_REPO_NAME=riven-frontend
-RIVEN_FRONTEND_RELEASE_VERSION_ENABLED=false
-RIVEN_FRONTEND_RELEASE_VERSION=v0.17.0
-RIVEN_FRONTEND_BRANCH_ENABLED=false
-RIVEN_FRONTEND_BRANCH=release-please--branches--main
-RIVEN_FRONTEND_SUPPRESS_LOGGING=false
-RIVEN_FRONTEND_LOG_LEVEL=INFO
-RIVEN_FRONTEND_HOST=127.0.0.1
-RIVEN_FRONTEND_PORT=3000
-RIVEN_FRONTEND_AUTO_UPDATE=false
-RIVEN_FRONTEND_AUTO_UPDATE_INTERVAL=24
-RIVEN_FRONTEND_CLEAR_ON_UPDATE=true
-RIVEN_FRONTEND_EXCLUDE_DIRS=
-RIVEN_FRONTEND_PLATFORMS=pnpm
-RIVEN_FRONTEND_COMMAND=node build
-RIVEN_FRONTEND_CONFIG_DIR=/riven/frontend
-RIVEN_FRONTEND_ENV_DIALECT=postgres
+| `RIVEN_FRONTEND_ENABLED` | `true` |
+| `RIVEN_FRONTEND_PROCESS_NAME` | `"Riven Frontend"` |
+| `RIVEN_FRONTEND_REPO_OWNER` | `rivenmedia` |
+| `RIVEN_FRONTEND_REPO_NAME` | `riven-frontend` |
+| `RIVEN_FRONTEND_RELEASE_VERSION_ENABLED` | `false` |
+| `RIVEN_FRONTEND_RELEASE_VERSION` | `v0.17.0` |
+| `RIVEN_FRONTEND_BRANCH_ENABLED` | `false` |
+| `RIVEN_FRONTEND_BRANCH` | `release-please--branches--main` |
+| `RIVEN_FRONTEND_SUPPRESS_LOGGING` | `false` |
+| `RIVEN_FRONTEND_LOG_LEVEL` | `INFO` |
+| `RIVEN_FRONTEND_HOST` | `127.0.0.1` |
+| `RIVEN_FRONTEND_PORT` | `3000` |
+| `RIVEN_FRONTEND_AUTO_UPDATE` | `false` |
+| `RIVEN_FRONTEND_AUTO_UPDATE_INTERVAL` | `24` |
+| `RIVEN_FRONTEND_CLEAR_ON_UPDATE` | `true` |
+| `RIVEN_FRONTEND_EXCLUDE_DIRS` | `(null)` |
+| `RIVEN_FRONTEND_PLATFORMS` | `pnpm` |
+| `RIVEN_FRONTEND_COMMAND` | `node build` |
+| `RIVEN_FRONTEND_CONFIG_DIR` | `/riven/frontend` |
+| `RIVEN_FRONTEND_ENV_DIALECT` | `postgres` |
 
 Zilean Variables:
 | Variable       | Default  | Description                                                       | Required for DMB |
 | -------------- | -------- | ------------------------------------------------------------------|----------------- |
-ZILEAN_ENABLED=true
-ZILEAN_PROCESS_NAME=Zilean
-ZILEAN_REPO_OWNER=iPromKnight
-ZILEAN_REPO_NAME=zilean
-ZILEAN_RELEASE_VERSION_ENABLED=false
-ZILEAN_RELEASE_VERSION=v3.3.0
-ZILEAN_BRANCH_ENABLED=false
-ZILEAN_BRANCH=main
-ZILEAN_SUPPRESS_LOGGING=false
-ZILEAN_LOG_LEVEL=INFO
-ZILEAN_HOST=127.0.0.1
-ZILEAN_PORT=8182
-ZILEAN_AUTO_UPDATE=false
-ZILEAN_AUTO_UPDATE_INTERVAL=24
-ZILEAN_CLEAR_ON_UPDATE=true
-ZILEAN_EXCLUDE_DIRS=/zilean/app/data
-ZILEAN_ENV_COPY_SOURCE=/zilean/app/data/.env
-ZILEAN_ENV_COPY_DESTINATION=/zilean/app/src/.env
-ZILEAN_PLATFORMS=python dotnet
-ZILEAN_COMMAND=/zilean/app/zilean-api
-ZILEAN_CONFIG_DIR=/zilean
-ZILEAN_CONFIG_FILE=/zilean/app/data/settings.json
+| `ZILEAN_ENABLED` | `true` |
+| `ZILEAN_PROCESS_NAME` | `Zilean` |
+| `ZILEAN_REPO_OWNER` | `iPromKnight` |
+| `ZILEAN_REPO_NAME` | `zilean` |
+| `ZILEAN_RELEASE_VERSION_ENABLED` | `false` |
+| `ZILEAN_RELEASE_VERSION` | `v3.3.0` |
+| `ZILEAN_BRANCH_ENABLED` | `false` |
+| `ZILEAN_BRANCH` | `main` |
+| `ZILEAN_SUPPRESS_LOGGING` | `false` | 
+| `ZILEAN_LOG_LEVEL` | `INFO` |
+| `ZILEAN_HOST` | `127.0.0.1` |
+| `ZILEAN_PORT` | `8182` |
+| `ZILEAN_AUTO_UPDATE` | `false` |
+| `ZILEAN_AUTO_UPDATE_INTERVAL` | `24` |
+| `ZILEAN_CLEAR_ON_UPDATE` | `true` |
+| `ZILEAN_EXCLUDE_DIRS` | `/zilean/app/data` |
+| `ZILEAN_ENV_COPY_SOURCE` | `/zilean/app/data/.env` |
+| `ZILEAN_ENV_COPY_DESTINATION` | `/zilean/app/src/.env` |
+| `ZILEAN_PLATFORMS` | `python dotnet` |
+| `ZILEAN_COMMAND` | `/zilean/app/zilean-api` | 
+| `ZILEAN_CONFIG_DIR` | `/zilean` | 
+| `ZILEAN_CONFIG_FILE` | `/zilean/app/data/settings.json` |
 
 Zurg Variables:
 | Variable       | Default  | Description                                                       | Required for DMB |
 | -------------- | -------- | ------------------------------------------------------------------|----------------- |
-ZURG_INSTANCES_REALDEBRID_ENABLED=true
-ZURG_INSTANCES_REALDEBRID_PROCESS_NAME="Zurg w/ RealDebrid"
-ZURG_INSTANCES_REALDEBRID_REPO_OWNER=debridmediamanager
-ZURG_INSTANCES_REALDEBRID_REPO_NAME=zurg-testing
-ZURG_INSTANCES_REALDEBRID_RELEASE_VERSION_ENABLED=false
-ZURG_INSTANCES_REALDEBRID_RELEASE_VERSION=v0.9.3-final
-ZURG_INSTANCES_REALDEBRID_SUPPRESS_LOGGING=false
-ZURG_INSTANCES_REALDEBRID_LOG_LEVEL=INFO
-ZURG_INSTANCES_REALDEBRID_AUTO_UPDATE=false
-ZURG_INSTANCES_REALDEBRID_AUTO_UPDATE_INTERVAL=1
-ZURG_INSTANCES_REALDEBRID_CLEAR_ON_UPDATE=false
-ZURG_INSTANCES_REALDEBRID_EXCLUDE_DIRS=
-ZURG_INSTANCES_REALDEBRID_KEY_TYPE=RealDebrid
-ZURG_INSTANCES_REALDEBRID_CONFIG_DIR=/zurg/RD
-ZURG_INSTANCES_REALDEBRID_CONFIG_FILE=/zurg/RD/config.yml
-ZURG_INSTANCES_REALDEBRID_COMMAND=/zurg/RD/zurg
-ZURG_INSTANCES_REALDEBRID_PORT=
-ZURG_INSTANCES_REALDEBRID_USER=
-ZURG_INSTANCES_REALDEBRID_PASSWORD=
-ZURG_INSTANCES_REALDEBRID_API_KEY=
+| `ZURG_INSTANCES_REALDEBRID_ENABLED` | `true` |
+| `ZURG_INSTANCES_REALDEBRID_PROCESS_NAME` | `"Zurg w/ RealDebrid"` |
+| `ZURG_INSTANCES_REALDEBRID_REPO_OWNER` | `debridmediamanager` |
+| `ZURG_INSTANCES_REALDEBRID_REPO_NAME` | `zurg-testing` |
+| `ZURG_INSTANCES_REALDEBRID_RELEASE_VERSION_ENABLED` | `false` |
+| `ZURG_INSTANCES_REALDEBRID_RELEASE_VERSION` | `v0.9.3-final` | 
+| `ZURG_INSTANCES_REALDEBRID_SUPPRESS_LOGGING` | `false` |
+| `ZURG_INSTANCES_REALDEBRID_LOG_LEVEL` | `INFO` |
+| `ZURG_INSTANCES_REALDEBRID_AUTO_UPDATE` | `false` |
+| `ZURG_INSTANCES_REALDEBRID_AUTO_UPDATE_INTERVAL` | `1` |
+| `ZURG_INSTANCES_REALDEBRID_CLEAR_ON_UPDATE` | `false` |
+| `ZURG_INSTANCES_REALDEBRID_EXCLUDE_DIRS` | `(null)` |
+| `ZURG_INSTANCES_REALDEBRID_KEY_TYPE` | `RealDebrid` |
+| `ZURG_INSTANCES_REALDEBRID_CONFIG_DIR` | `/zurg/RD` |
+| `ZURG_INSTANCES_REALDEBRID_CONFIG_FILE` | `/zurg/RD/config.yml` |
+| `ZURG_INSTANCES_REALDEBRID_COMMAND` | `/zurg/RD/zurg` |
+| `ZURG_INSTANCES_REALDEBRID_PORT` | `(null)` |
+| `ZURG_INSTANCES_REALDEBRID_USER` | `(null)` |
+| `ZURG_INSTANCES_REALDEBRID_PASSWORD` | `(null)` | | :heavy_check_mark: |
+| `ZURG_INSTANCES_REALDEBRID_API_KEY` | `(null)` |
 
 ## 🌐 Ports Used
 
