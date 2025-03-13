@@ -148,58 +148,58 @@ DMB API Variables:
 DMB Frontend Variables:
 | Variable       | Default  | Description                                                       | Required for DMB |
 | -------------- | -------- | ------------------------------------------------------------------|----------------- |
-| `DMB_FRONTEND_ENABLED` | `true` |
-| `DMB_FRONTEND_PROCESS_NAME` | `"DMB Frontend"` |
-| `DMB_FRONTEND_REPO_OWNER` | `I-am-PUID-0` |
-| `DMB_FRONTEND_REPO_NAME` | `dmbdb` |
-| `DMB_FRONTEND_RELEASE_VERSION_ENABLED` | `false` |
-| `DMB_FRONTEND_RELEASE_VERSION` | `1.1.0` |
-| `DMB_FRONTEND_BRANCH_ENABLED` | `false` |
-| `DMB_FRONTEND_BRANCH` | `main` |
-| `DMB_FRONTEND_SUPPRESS_LOGGING` | `false` |
-| `DMB_FRONTEND_LOG_LEVEL` | `INFO` |
-| `DMB_FRONTEND_ORIGINS` | `http://0.0.0.0:3005` |
-| `DMB_FRONTEND_HOST` | `0.0.0.0` |
-| `DMB_FRONTEND_PORT` | `3005` |
-| `DMB_FRONTEND_AUTO_UPDATE` | `false` |
-| `DMB_FRONTEND_AUTO_UPDATE_INTERVAL` | `24` |
-| `DMB_FRONTEND_CLEAR_ON_UPDATE` | `true` |
-| `DMB_FRONTEND_EXCLUDE_DIRS` | `(null)`
+| `DMB_FRONTEND_ENABLED` | `true` | Enables or Disables DMB frontend |  |
+| `DMB_FRONTEND_PROCESS_NAME` | `"DMB Frontend"` | Name of the DMB frontend process |  |
+| `DMB_FRONTEND_REPO_OWNER` | `I-am-PUID-0` | Owner of the DMB Repo |  |
+| `DMB_FRONTEND_REPO_NAME` | `dmbdb` | Name of the DMB frontend repository |  |
+| `DMB_FRONTEND_RELEASE_VERSION_ENABLED` | `false` | Enables or disables setting the release version |  |
+| `DMB_FRONTEND_RELEASE_VERSION` | `1.1.0` | Version of the DMB frontend you would like to use |  | 
+| `DMB_FRONTEND_BRANCH_ENABLED` | `false` | Enables or disables setting the branch of the DMB frontend |  |
+| `DMB_FRONTEND_BRANCH` | `main` | Which branch of the DMB frontend you would like to use |  |
+| `DMB_FRONTEND_SUPPRESS_LOGGING` | `false` |  Enables or disables logging for the DMB frontend |  |
+| `DMB_FRONTEND_LOG_LEVEL` | `INFO` |  Log level for the DMB frontend.  Options are `INFO` or `DEBUG` |  |
+| `DMB_FRONTEND_ORIGINS` | `http://0.0.0.0:3005` |  IP Address used to access the DMB frontend |  |
+| `DMB_FRONTEND_HOST` | `0.0.0.0` | IP Address of the DMB frontend host machine |  |
+| `DMB_FRONTEND_PORT` | `3005` | the port used by the DMB frontend |  |
+| `DMB_FRONTEND_AUTO_UPDATE` | `false` | Enables or disables auto-updating the DMB frontend |  |
+| `DMB_FRONTEND_AUTO_UPDATE_INTERVAL` | `24` | Time between attempts to update the DMB Frontend |  |
+| `DMB_FRONTEND_CLEAR_ON_UPDATE` | `true` | 
+| `DMB_FRONTEND_EXCLUDE_DIRS` | `(null)` | 
 | `DMB_FRONTEND_PLATFORMS` | `pnpm` |
 | `DMB_FRONTEND_COMMAND` | `node .output/server/index.mjs` |
-| `DMB_FRONTEND_CONFIG_DIR` | `/dmb/frontend` |
+| `DMB_FRONTEND_CONFIG_DIR` | `/dmb/frontend` | Directory where the DMB frontend configuration files are located |  |
 
 PostgreSQL Variables:
 | Variable       | Default  | Description                                                       | Required for DMB |
 | -------------- | -------- | ------------------------------------------------------------------|----------------- |
-| `POSTGRES_ENABLED` | `true` |
-| `POSTGRES_PROCESS_NAME` | `PostgreSQL` |
-| `POSTGRES_SUPPRESS_LOGGING` | `false` |
-| `POSTGRES_LOG_LEVEL` | `INFO` |
-| `POSTGRES_HOST` | `127.0.0.1` |
-| `POSTGRES_PORT` | `5432` |
-| `POSTGRES_CONFIG_DIR` | `/postgres_data` |
-| `POSTGRES_CONFIG_FILE` | `/postgres_data/postgresql.conf` | 
-| `POSTGRES_INITDB_ARGS` | `--data-checksums` |
-| `POSTGRES_USER` | `DMB` |
-| `POSTGRES_PASSWORD` | `postgres` |
-| `POSTGRES_SHARED_BUFFERS` | `128MB` |
-| `POSTGRES_MAX_CONNECTIONS` | `100` |
-| `POSTGRES_RUN_DIRECTORY` | `/run/postgresql` |
+| `POSTGRES_ENABLED` | `true` | Enables or disables PostgreSQL database |  |
+| `POSTGRES_PROCESS_NAME` | `PostgreSQL` | Name of PostgreSQL process |  |
+| `POSTGRES_SUPPRESS_LOGGING` | `false` | Enables or disables logging for PostgreSQL |  |
+| `POSTGRES_LOG_LEVEL` | `INFO` | Log level for the PostgreSQL.  Options are `INFO` or `DEBUG`
+| `POSTGRES_HOST` | `127.0.0.1` | IP Address of the PostgreSQL host machine |  |
+| `POSTGRES_PORT` | `5432` | IP Address used by PostgreSQL |  |
+| `POSTGRES_CONFIG_DIR` | `/postgres_data` | Path for PostgreSQL data |  |
+| `POSTGRES_CONFIG_FILE` | `/postgres_data/postgresql.conf` | Path for PostgreSQL configuration file |  |
+| `POSTGRES_INITDB_ARGS` | `--data-checksums` | 
+| `POSTGRES_USER` | `DMB` | Username for PostgreSQL |  |
+| `POSTGRES_PASSWORD` | `postgres` | Password for PostgreSQL |  |
+| `POSTGRES_SHARED_BUFFERS` | `128MB` | 
+| `POSTGRES_MAX_CONNECTIONS` | `100` | Maximum number of connections used by PostgreSQL
+| `POSTGRES_RUN_DIRECTORY` | `/run/postgresql` | 
 | `POSTGRES_COMMAND` | `postgres -D {postgres_config_dir} -c config_file={postgres_config_file}` |
 
 pgAdmin Variables:
 | Variable       | Default  | Description                                                       | Required for DMB |
 | -------------- | -------- | ------------------------------------------------------------------|----------------- |
-| `PGADMIN_ENABLED` | `true` |
-| `PGADMIN_PROCESS_NAME` | `pgAdmin4` |
-| `PGADMIN_CONFIG_DIR` | `/pgadmin/data` |
-| `PGADMIN_CONFIG_FILE` | `/pgadmin/data/config_local.py` |
-| `PGADMIN_LOG_FILE` | `/pgadmin/data/pgadmin4.log` |
-| `PGADMIN_PORT` | `5050` |
-| `PGADMIN_DEFAULT_SERVER` | `0.0.0.0` |
-| `PGADMIN_SETUP_EMAIL` | `DMB@DMB.DMB` |
-| `PGADMIN_SETUP_PASSWORD` | `postgres` |
+| `PGADMIN_ENABLED` | `true` | Enables or disables pgAdmin4 |  |
+| `PGADMIN_PROCESS_NAME` | `pgAdmin4` | Name of the pgAdmin4 process |  |
+| `PGADMIN_CONFIG_DIR` | `/pgadmin/data` | Location of pgAdmin4 configuration data |  |
+| `PGADMIN_CONFIG_FILE` | `/pgadmin/data/config_local.py` | Location of the pgAdmin4 configuration file |  |
+| `PGADMIN_LOG_FILE` | `/pgadmin/data/pgadmin4.log` | Location of the pgAdmin4 log file |  |
+| `PGADMIN_PORT` | `5050` | Port used by pgAdmin4 |  |
+| `PGADMIN_DEFAULT_SERVER` | `0.0.0.0` | IP Address of the default pgAdmin server |  |
+| `PGADMIN_SETUP_EMAIL` | `DMB@DMB.DMB` | Email used to log in to pgAdmin4 |  |
+| `PGADMIN_SETUP_PASSWORD` | `postgres` | Password used to log in to pgAdmin 4 |  |
 
 Rclone Variables:
 | Variable       | Default  | Description                                                       | Required for DMB |
