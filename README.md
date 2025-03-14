@@ -116,6 +116,17 @@ services:
 
 The following table lists all available environment variables used by the container. The environment variables are set via the `-e` parameter or via the docker-compose file within the `environment:` section or with a .env file saved to the config directory. Value of this parameter is listed as `<VARIABLE_NAME>=<Value>`
 
+Variables required by DMB:
+| Variable       | Default  | Description                                                       | Required for DMB |
+| -------------- | -------- | ------------------------------------------------------------------|----------------- |
+| `PUID`         | `1000`   | Your User ID | :heavy_check_mark: |
+| `PGID`         | `1000`   | Your Group ID |:heavy_check_mark: |
+| `TZ`           | `(null)` | Your time zone listed as `Area/Location` | :heavy_check_mark: |
+| `DMB_LOG_LEVEL` | `INFO` | Set the log level of DMB. Choices are `INFO` or `DEBUG` | :heavy_check_mark: |
+| `ZURG_INSTANCES_REALDEBRID_API_KEY` | `(null)` | Enter your Real-Debrid API Token | :heavy_check_mark: |
+| `RIVEN_FRONTEND_ENV_ORIGIN` | `http://0.0.0.0:3000` | The IP address used to access the DMB frontend.  Change this to the IP address of your DMB container. | :heavy_check_mark: |
+
+
 Global Variables:
 | Variable       | Default  | Description                                                       | Required for DMB |
 | -------------- | -------- | ------------------------------------------------------------------|----------------- |
