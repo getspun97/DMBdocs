@@ -154,7 +154,7 @@ DMB Frontend Variables:
 | `DMB_FRONTEND_REPO_NAME` | `dmbdb` | Name of the DMB frontend repository |  |
 | `DMB_FRONTEND_RELEASE_VERSION_ENABLED` | `false` | Enables or disables setting the release version |  |
 | `DMB_FRONTEND_RELEASE_VERSION` | `1.1.0` | Version of the DMB frontend you would like to use |  | 
-| `DMB_FRONTEND_BRANCH_ENABLED` | `false` | Enables or disables setting the branch of the DMB frontend |  |
+| `DMB_FRONTEND_BRANCH_ENABLED` | `false` | Enables or disables choosing which branch of the DMB frontend you would  like to use |  |
 | `DMB_FRONTEND_BRANCH` | `main` | Which branch of the DMB frontend you would like to use |  |
 | `DMB_FRONTEND_SUPPRESS_LOGGING` | `false` |  Enables or disables logging for the DMB frontend |  |
 | `DMB_FRONTEND_LOG_LEVEL` | `INFO` |  Log level for the DMB frontend.  Options are `INFO` or `DEBUG` |  |
@@ -204,122 +204,122 @@ pgAdmin Variables:
 Rclone Variables:
 | Variable       | Default  | Description                                                       | Required for DMB |
 | -------------- | -------- | ------------------------------------------------------------------|----------------- |
-| `RCLONE_INSTANCES_REALDEBRID_ENABLED` | `true` |
-| `RCLONE_INSTANCES_REALDEBRID_PROCESS_NAME` | `"rclone w/ RealDebrid"` |
-| `RCLONE_INSTANCES_REALDEBRID_SUPPRESS_LOGGING` | `false` |
-| `RCLONE_INSTANCES_REALDEBRID_LOG_LEVEL` | `INFO` |
-| `RCLONE_INSTANCES_REALDEBRID_KEY_TYPE` | `RealDebrid` |
-| `RCLONE_INSTANCES_REALDEBRID_ZURG_ENABLED` | `true` |
-| `RCLONE_INSTANCES_REALDEBRID_MOUNT_DIR` | `/data` |
-| `RCLONE_INSTANCES_REALDEBRID_MOUNT_NAME` | `rclone_RD` |
-| `RCLONE_INSTANCES_REALDEBRID_CACHE_DIR` | `/cache` |
-| `RCLONE_INSTANCES_REALDEBRID_CONFIG_DIR` | `/config` |
-| `RCLONE_INSTANCES_REALDEBRID_CONFIG_FILE` | `/config/rclone.config` |
-| `RCLONE_INSTANCES_REALDEBRID_ZURG_CONFIG_FILE` | `/zurg/RD/config.yml` |
-| `RCLONE_INSTANCES_REALDEBRID_COMMAND` | `(null)` |
-| `RCLONE_INSTANCES_REALDEBRID_API_KEY` | `(null)` |
+| `RCLONE_INSTANCES_REALDEBRID_ENABLED` | `true` | Enables or disables the rClone instance |  |
+| `RCLONE_INSTANCES_REALDEBRID_PROCESS_NAME` | `"rclone w/ RealDebrid"` | Name of the  rClone instance  |  |
+| `RCLONE_INSTANCES_REALDEBRID_SUPPRESS_LOGGING` | `false` | Suppress rClone logging |  |
+| `RCLONE_INSTANCES_REALDEBRID_LOG_LEVEL` | `INFO` | rClone log level.  Options are `INFO` or `DEBUG` |  |
+| `RCLONE_INSTANCES_REALDEBRID_KEY_TYPE` | `RealDebrid` | 
+| `RCLONE_INSTANCES_REALDEBRID_ZURG_ENABLED` | `true` | 
+| `RCLONE_INSTANCES_REALDEBRID_MOUNT_DIR` | `/data` | Location of rClone mount |  |
+| `RCLONE_INSTANCES_REALDEBRID_MOUNT_NAME` | `rclone_RD` | Name of your rClone mount |  |
+| `RCLONE_INSTANCES_REALDEBRID_CACHE_DIR` | `/cache` | Location of the rClone cache |  |
+| `RCLONE_INSTANCES_REALDEBRID_CONFIG_DIR` | `/config` | Location of the rClone configuration data |  |
+| `RCLONE_INSTANCES_REALDEBRID_CONFIG_FILE` | `/config/rclone.config` | Location of the rClone configuration file |  |
+| `RCLONE_INSTANCES_REALDEBRID_ZURG_CONFIG_FILE` | `/zurg/RD/config.yml` | Location of your Zurg configuration file |  |
+| `RCLONE_INSTANCES_REALDEBRID_COMMAND` | `(null)` | 
+| `RCLONE_INSTANCES_REALDEBRID_API_KEY` | `(null)` | Enter your Real-Debrid API Token |  |
 
 Riven Backend Variables:
 | Variable       | Default  | Description                                                       | Required for DMB |
 | -------------- | -------- | ------------------------------------------------------------------|----------------- |
-| `RIVEN_BACKEND_ENABLED` | `true` |
-| `RIVEN_BACKEND_PROCESS_NAME` | `"Riven Backend"` |
-| `RIVEN_BACKEND_REPO_OWNER` | `rivenmedia` |
-| `RIVEN_BACKEND_REPO_NAME` | `riven` |
-| `RIVEN_BACKEND_RELEASE_VERSION_ENABLED` | `false` |
-| `RIVEN_BACKEND_RELEASE_VERSION` | `v0.20.1` |
-| `RIVEN_BACKEND_BRANCH_ENABLED` | `false` |
-| `RIVEN_BACKEND_BRANCH` | `release-please--branches--main` |
-| `RIVEN_BACKEND_SUPPRESS_LOGGING` | `false` |
-| `RIVEN_BACKEND_LOG_LEVEL` | `INFO` |
-| `RIVEN_BACKEND_HOST` | `127.0.0.1` |
-| `RIVEN_BACKEND_PORT` | `8080` |
-| `RIVEN_BACKEND_AUTO_UPDATE` | `false` |
-| `RIVEN_BACKEND_AUTO_UPDATE_INTERVAL` | `24` |
-| `RIVEN_BACKEND_SYMLINK_LIBRARY_PATH` | `/mnt` |
-| `RIVEN_BACKEND_CLEAR_ON_UPDATE` | `true` |
+| `RIVEN_BACKEND_ENABLED` | `true` | Enables or disables the Riven backend |  |
+| `RIVEN_BACKEND_PROCESS_NAME` | `"Riven Backend"` | Name of the Riven backend process
+| `RIVEN_BACKEND_REPO_OWNER` | `rivenmedia` | Owner of the Riven github repository |  |
+| `RIVEN_BACKEND_REPO_NAME` | `riven` | Name for the Riven backend |  |
+| `RIVEN_BACKEND_RELEASE_VERSION_ENABLED` | `false` | Enables or disables setting the Riven backend version |  |
+| `RIVEN_BACKEND_RELEASE_VERSION` | `v0.20.1` | Whhich version of the Riven backend you would like to use |  |
+| `RIVEN_BACKEND_BRANCH_ENABLED` | `false` | Enables or disables choosing which branch of the Riven backend you would like to use |  |
+| `RIVEN_BACKEND_BRANCH` | `release-please--branches--main` | Which branch of the Riven backend you would like to use |  |
+| `RIVEN_BACKEND_SUPPRESS_LOGGING` | `false` | Supprress logging for the Riven backend |  |
+| `RIVEN_BACKEND_LOG_LEVEL` | `INFO` | Log level of the Riven backend. Options are `INFO` and `DEBUG` |  |
+| `RIVEN_BACKEND_HOST` | `127.0.0.1` | IP Address of the Riven backend host |  |
+| `RIVEN_BACKEND_PORT` | `8080` | Port used by the Riven backend |  |
+| `RIVEN_BACKEND_AUTO_UPDATE` | `false` | Enables or disables auto-updates for the Riven backend
+| `RIVEN_BACKEND_AUTO_UPDATE_INTERVAL` | `24` | How often to check for updates for the Riven backend |  |
+| `RIVEN_BACKEND_SYMLINK_LIBRARY_PATH` | `/mnt` | Path for the Riven symlink library |  |
+| `RIVEN_BACKEND_CLEAR_ON_UPDATE` | `true` | 
 | `RIVEN_BACKEND_EXCLUDE_DIRS` | `/riven/backend/data` |
-| `RIVEN_BACKEND_ENV_COPY_SOURCE` | `/riven/backend/data/.env` |
+| `RIVEN_BACKEND_ENV_COPY_SOURCE` | `/riven/backend/data/.env` |  |  |
 | `RIVEN_BACKEND_ENV_COPY_DESTINATION` | `/riven/backend/src/.env` |
 | `RIVEN_BACKEND_PLATFORMS` | `python` |
 | `RIVEN_BACKEND_COMMAND` | `/riven/backend/venv/bin/python src/main.py` |
-| `RIVEN_BACKEND_CONFIG_DIR` | `/riven/backend` |
-| `RIVEN_BACKEND_CONFIG_FILE` | `/riven/backend/data/settings.json` |
-| `RIVEN_BACKEND_WAIT_FOR_DIR` | `/data/rclone_RD/__all__` |
+| `RIVEN_BACKEND_CONFIG_DIR` | `/riven/backend` | Location of the Riven backend configuration data |  |
+| `RIVEN_BACKEND_CONFIG_FILE` | `/riven/backend/data/settings.json` | Location of the Riven backend configuration file |  |
+| `RIVEN_BACKEND_WAIT_FOR_DIR` | `/data/rclone_RD/__all__` | Instructs the Riven backend to wait until it sees this directory. |  |
 
 Riven Frontend Variables:
 | Variable       | Default  | Description                                                       | Required for DMB |
 | -------------- | -------- | ------------------------------------------------------------------|----------------- |
-| `RIVEN_FRONTEND_ENABLED` | `true` |
-| `RIVEN_FRONTEND_PROCESS_NAME` | `"Riven Frontend"` |
-| `RIVEN_FRONTEND_REPO_OWNER` | `rivenmedia` |
-| `RIVEN_FRONTEND_REPO_NAME` | `riven-frontend` |
-| `RIVEN_FRONTEND_RELEASE_VERSION_ENABLED` | `false` |
-| `RIVEN_FRONTEND_RELEASE_VERSION` | `v0.17.0` |
-| `RIVEN_FRONTEND_BRANCH_ENABLED` | `false` |
-| `RIVEN_FRONTEND_BRANCH` | `release-please--branches--main` |
-| `RIVEN_FRONTEND_SUPPRESS_LOGGING` | `false` |
-| `RIVEN_FRONTEND_LOG_LEVEL` | `INFO` |
-| `RIVEN_FRONTEND_HOST` | `127.0.0.1` |
-| `RIVEN_FRONTEND_PORT` | `3000` |
-| `RIVEN_FRONTEND_AUTO_UPDATE` | `false` |
-| `RIVEN_FRONTEND_AUTO_UPDATE_INTERVAL` | `24` |
+| `RIVEN_FRONTEND_ENABLED` | `true` | Enables or disables the Riven frontend |  |
+| `RIVEN_FRONTEND_PROCESS_NAME` | `"Riven Frontend"` | Name of the Riven frontend process |  |
+| `RIVEN_FRONTEND_REPO_OWNER` | `rivenmedia` | Owner of the Riven frontend githum repository |  |
+| `RIVEN_FRONTEND_REPO_NAME` | `riven-frontend` | Name of the Riven frontend github repository |  |
+| `RIVEN_FRONTEND_RELEASE_VERSION_ENABLED` | `false` | Enables or disables setting which version of the Riven frontend you would like to use |  |
+| `RIVEN_FRONTEND_RELEASE_VERSION` | `v0.17.0` | Which version of the Riven frontend you would like to use |  |
+| `RIVEN_FRONTEND_BRANCH_ENABLED` | `false` | Enables or disables choosing which branch of the Riven frontend you want to use  |  |
+| `RIVEN_FRONTEND_BRANCH` | `release-please--branches--main` | Which branch of the Riven frontend you would like to use |  |
+| `RIVEN_FRONTEND_SUPPRESS_LOGGING` | `false` | Supress logging for the Riven frontend |  |
+| `RIVEN_FRONTEND_LOG_LEVEL` | `INFO` | Set the log level of the Riven frontend |  |
+| `RIVEN_FRONTEND_HOST` | `127.0.0.1` | IP Address of the Riven frontend host |  |
+| `RIVEN_FRONTEND_PORT` | `3000` | Port used by the riven front end  |  |
+| `RIVEN_FRONTEND_AUTO_UPDATE` | `false` | Enables or disables auto-updates for the Riven frontend |  |
+| `RIVEN_FRONTEND_AUTO_UPDATE_INTERVAL` | `24` | How often to check for updates to the Riven frontend |  |
 | `RIVEN_FRONTEND_CLEAR_ON_UPDATE` | `true` |
 | `RIVEN_FRONTEND_EXCLUDE_DIRS` | `(null)` |
 | `RIVEN_FRONTEND_PLATFORMS` | `pnpm` |
 | `RIVEN_FRONTEND_COMMAND` | `node build` |
-| `RIVEN_FRONTEND_CONFIG_DIR` | `/riven/frontend` |
+| `RIVEN_FRONTEND_CONFIG_DIR` | `/riven/frontend` | Location of the Riven frontend configuration files |  |
 | `RIVEN_FRONTEND_ENV_DIALECT` | `postgres` |
 
 Zilean Variables:
 | Variable       | Default  | Description                                                       | Required for DMB |
 | -------------- | -------- | ------------------------------------------------------------------|----------------- |
-| `ZILEAN_ENABLED` | `true` |
-| `ZILEAN_PROCESS_NAME` | `Zilean` |
-| `ZILEAN_REPO_OWNER` | `iPromKnight` |
-| `ZILEAN_REPO_NAME` | `zilean` |
-| `ZILEAN_RELEASE_VERSION_ENABLED` | `false` |
-| `ZILEAN_RELEASE_VERSION` | `v3.3.0` |
-| `ZILEAN_BRANCH_ENABLED` | `false` |
-| `ZILEAN_BRANCH` | `main` |
-| `ZILEAN_SUPPRESS_LOGGING` | `false` | 
-| `ZILEAN_LOG_LEVEL` | `INFO` |
-| `ZILEAN_HOST` | `127.0.0.1` |
-| `ZILEAN_PORT` | `8182` |
-| `ZILEAN_AUTO_UPDATE` | `false` |
-| `ZILEAN_AUTO_UPDATE_INTERVAL` | `24` |
-| `ZILEAN_CLEAR_ON_UPDATE` | `true` |
+| `ZILEAN_ENABLED` | `true` | Enables or disables Zilean |  |
+| `ZILEAN_PROCESS_NAME` | `Zilean` | Name of the Zilean process |  |
+| `ZILEAN_REPO_OWNER` | `iPromKnight` | Owner  of  the Zilean github repository |  |
+| `ZILEAN_REPO_NAME` | `zilean` |  Name of the Zilean github repository |  |
+| `ZILEAN_RELEASE_VERSION_ENABLED` | `false` | Enables or disables setting the version of Zilean  you would like to use |  | 
+| `ZILEAN_RELEASE_VERSION` | `v3.3.0` | Which version of Zilean you would like to use |  |
+| `ZILEAN_BRANCH_ENABLED` | `false` | Enables or disables setting which branch of Zilean you would like to use |  |
+| `ZILEAN_BRANCH` | `main` | Which branch of Zilean you would like to use |  |
+| `ZILEAN_SUPPRESS_LOGGING` | `false` | Suppress logging for Zilean |  |
+| `ZILEAN_LOG_LEVEL` | `INFO` | Set the log level for Zilean |  |
+| `ZILEAN_HOST` | `127.0.0.1` | IP address of the Zilean host |  |
+| `ZILEAN_PORT` | `8182` | Port used by Zilean |  |
+| `ZILEAN_AUTO_UPDATE` | `false` | Enables or disables auto-updates for Zilean |  |
+| `ZILEAN_AUTO_UPDATE_INTERVAL` | `24` | How often to check Zilean for updates |  |
+| `ZILEAN_CLEAR_ON_UPDATE` | `true` | 
 | `ZILEAN_EXCLUDE_DIRS` | `/zilean/app/data` |
 | `ZILEAN_ENV_COPY_SOURCE` | `/zilean/app/data/.env` |
 | `ZILEAN_ENV_COPY_DESTINATION` | `/zilean/app/src/.env` |
 | `ZILEAN_PLATFORMS` | `python dotnet` |
 | `ZILEAN_COMMAND` | `/zilean/app/zilean-api` | 
-| `ZILEAN_CONFIG_DIR` | `/zilean` | 
-| `ZILEAN_CONFIG_FILE` | `/zilean/app/data/settings.json` |
+| `ZILEAN_CONFIG_DIR` | `/zilean` | Location of Zilean configuration data |  | 
+| `ZILEAN_CONFIG_FILE` | `/zilean/app/data/settings.json` | Location of the Zilean configuration file |  |
 
 Zurg Variables:
 | Variable       | Default  | Description                                                       | Required for DMB |
 | -------------- | -------- | ------------------------------------------------------------------|----------------- |
-| `ZURG_INSTANCES_REALDEBRID_ENABLED` | `true` |
-| `ZURG_INSTANCES_REALDEBRID_PROCESS_NAME` | `"Zurg w/ RealDebrid"` |
-| `ZURG_INSTANCES_REALDEBRID_REPO_OWNER` | `debridmediamanager` |
-| `ZURG_INSTANCES_REALDEBRID_REPO_NAME` | `zurg-testing` |
-| `ZURG_INSTANCES_REALDEBRID_RELEASE_VERSION_ENABLED` | `false` |
-| `ZURG_INSTANCES_REALDEBRID_RELEASE_VERSION` | `v0.9.3-final` | 
-| `ZURG_INSTANCES_REALDEBRID_SUPPRESS_LOGGING` | `false` |
-| `ZURG_INSTANCES_REALDEBRID_LOG_LEVEL` | `INFO` |
-| `ZURG_INSTANCES_REALDEBRID_AUTO_UPDATE` | `false` |
-| `ZURG_INSTANCES_REALDEBRID_AUTO_UPDATE_INTERVAL` | `1` |
-| `ZURG_INSTANCES_REALDEBRID_CLEAR_ON_UPDATE` | `false` |
+| `ZURG_INSTANCES_REALDEBRID_ENABLED` | `true` | Enables or disables Zurg |  |
+| `ZURG_INSTANCES_REALDEBRID_PROCESS_NAME` | `"Zurg w/ RealDebrid"` | Name of the Zurg process |  |
+| `ZURG_INSTANCES_REALDEBRID_REPO_OWNER` | `debridmediamanager` | Owner of the Zurg github repository |  |
+| `ZURG_INSTANCES_REALDEBRID_REPO_NAME` | `zurg-testing` | Name of the Zurg github repository |  |
+| `ZURG_INSTANCES_REALDEBRID_RELEASE_VERSION_ENABLED` | `false` | Enables or disables setting the Zurg release version |  |
+| `ZURG_INSTANCES_REALDEBRID_RELEASE_VERSION` | `v0.9.3-final` | Which version of Zurg you would like to use |  |
+| `ZURG_INSTANCES_REALDEBRID_SUPPRESS_LOGGING` | `false` | Suppress logging of Zurg |  |
+| `ZURG_INSTANCES_REALDEBRID_LOG_LEVEL` | `INFO` | Set the log level of Zurg. Options are `INFO` or `DEBUG` |  |
+| `ZURG_INSTANCES_REALDEBRID_AUTO_UPDATE` | `false` | Enables or disables auto-updating of Zurg |  |
+| `ZURG_INSTANCES_REALDEBRID_AUTO_UPDATE_INTERVAL` | `1` | how often to check Zurg for updates |  |
+| `ZURG_INSTANCES_REALDEBRID_CLEAR_ON_UPDATE` | `false` | 
 | `ZURG_INSTANCES_REALDEBRID_EXCLUDE_DIRS` | `(null)` |
 | `ZURG_INSTANCES_REALDEBRID_KEY_TYPE` | `RealDebrid` |
-| `ZURG_INSTANCES_REALDEBRID_CONFIG_DIR` | `/zurg/RD` |
-| `ZURG_INSTANCES_REALDEBRID_CONFIG_FILE` | `/zurg/RD/config.yml` |
+| `ZURG_INSTANCES_REALDEBRID_CONFIG_DIR` | `/zurg/RD` | Location of the Zurg configuration data |  |
+| `ZURG_INSTANCES_REALDEBRID_CONFIG_FILE` | `/zurg/RD/config.yml` | Location of the Zurg configuration file |  |
 | `ZURG_INSTANCES_REALDEBRID_COMMAND` | `/zurg/RD/zurg` |
 | `ZURG_INSTANCES_REALDEBRID_PORT` | `(null)` |
 | `ZURG_INSTANCES_REALDEBRID_USER` | `(null)` |
-| `ZURG_INSTANCES_REALDEBRID_PASSWORD` | `(null)` | | :heavy_check_mark: |
-| `ZURG_INSTANCES_REALDEBRID_API_KEY` | `(null)` |
+| `ZURG_INSTANCES_REALDEBRID_PASSWORD` | `(null)` | | |
+| `ZURG_INSTANCES_REALDEBRID_API_KEY` | `(null)` | Enter your Real-Debrid API token here | :heavy_check_mark: | 
 
 ## 🌐 Ports Used
 
